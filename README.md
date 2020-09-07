@@ -31,7 +31,7 @@ Things you may want to cover:
 ”world_stranges_app”では誰でも譚の閲覧が出来ます。ユーザー登録を行う事で怪異譚の投稿が可能になります。
 あくまで様々な話を投稿閲覧することを楽しむアプリです。神話寓話、怪談実体験、創作を問わず不思議な世界の在り方を投稿してください。
 
-##Features
+## Features
 This app is aimed at collecting and summarizing various mysterious stories around the world.
 
 In "world_stranges_app", anyone can view the story.By registering as a user, you will be able to post Kaitantan.
