@@ -1,0 +1,29 @@
+.d-flex.align-items-center
+  %h1 投稿
+  .ml-auto.posts_button
+    %a.btn.btn-outline-info{href: "/posts"} 投稿一覧
+= form_for @post do |f|
+  .form-group
+    = f.label :title, '投稿タイトル'
+    = f.text_field :title, class: 'form-control'
+    %small#title-tip.form-text.text-muted
+      タイトルを入力してください。
+  .form-group
+    = f.label :body, '投稿内容'
+    = f.text_area :body, class: 'form-control', rows:10
+    %small.form-text.text-muted{id: "content-tip\""}
+      投稿内容を入力してください。
+  .form-group
+    = f.label :area, '投稿者名'
+    = f.text_field :area, class: 'form-control'
+    %small#poster-tip.form-text.text-muted
+      現場を入力してください。
+  .form-group
+    = f.label :level, '投稿タイトル'
+    = f.text_field :title, class: 'form-control'
+    %small#title-tip.form-text.text-muted
+      危険度を入力してください。
+  = f.submit '投稿', class: 'btn btn-info btn-block'
+  %small#submit-tip.form-text.text-muted
+    投稿する前に投稿内容を見直してください。
+    
