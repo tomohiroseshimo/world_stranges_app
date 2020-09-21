@@ -19,8 +19,8 @@
     %small#poster-tip.form-text.text-muted
       現場を入力してください。
   .form-group
-    = f.label :level, '投稿タイトル'
-    = f.text_field :title, class: 'form-control'
+    = f.label :level, '危険度レベル'
+    = f.text_field :level, class: 'form-control'
     %small#title-tip.form-text.text-muted
       危険度を入力してください。
   = f.submit '投稿', class: 'btn btn-info btn-block'

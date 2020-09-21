@@ -6,12 +6,19 @@ class PostsController < ApplicationController
   def witness
   end
 
-  def create
-  end
-
   def new
     @post = Post.new
   end
+
+  def create
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to root_path, notice: '投稿が成功しました'
+    else
+      render 'new', notice: '投稿できませんでした'
+    end
+  end
+
 
   def edit
   end
@@ -26,6 +33,10 @@ class PostsController < ApplicationController
   def destroy
   end
 
-   private
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :body, :area, :level)
+  end
 
 end
