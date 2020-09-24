@@ -1,9 +1,14 @@
 %h2 個別の怪異談話
 %table
   %tr
-    %th ID:
-    = @post.id
-    %th 名前:
+    %th 投稿者:
+    = @post.name
+    %th 談話タイトル:
     = @post.title
-    %th 投稿内容:
+    %th 内容:
     = @post.body
+    %th 発生・発見場所:
+    = @post.area
+    %th 危険度:
+    = @post.level
+    
