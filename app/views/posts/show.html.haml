@@ -1,15 +1,15 @@
 %h2 個別の怪異談話
 %table
-  -# ここにeach文をいれる
-  %tr
-    %th 投稿者:
-    = @post.name
-    %th 談話タイトル:
-    = @post.title
-    %th 内容:
-    = @post.body
-    %th 発生・発見場所:
-    = @post.area
-    %th 危険度:
-    = @post.level
-    
+  %th タイトル
+  %th 投稿内容
+  %th 発生場所
+  %th 危険度
+%table
+  -@post.each do |post|
+    %tr
+      -# ここの辺りに投稿者名を入れる（userテーブルを造ってから）
+      %th= post.title
+      %th= post.body
+      %th= post.area
+      %th= post.level
+       

@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
 
   def witness
+    @posts = Post.all
   end
 
   def new
@@ -23,7 +24,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.where(params[:id])
   end
 
   def update
